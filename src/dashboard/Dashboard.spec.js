@@ -16,13 +16,13 @@ describe('<Dashboard />', () => {
   it('displays open/closed', () => {
     const { getByTestId, queryByText } = render(<Dashboard />);
     expect(queryByText(/Open/i)).toBeTruthy();
-    fireEvent.click(getByTestId(/controlsButton2/i));
+    fireEvent.click(getByTestId(/closeButton/i));
     expect(queryByText(/Closed/i)).toBeTruthy();
   })
   it('displays locked/unlocked', () => {
     const { getByTestId, queryByText } = render(<Dashboard />);
     expect(queryByText(/Unlocked/i)).toBeTruthy();
-    fireEvent.click(getByTestId(/controlsButton1/i));
+    fireEvent.click(getByTestId(/lockButton/i));
     expect(queryByText(/Locked/i)).toBeTruthy();
   })
 });
